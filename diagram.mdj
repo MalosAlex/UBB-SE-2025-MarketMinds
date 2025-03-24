@@ -34090,6 +34090,20 @@
 							"headQualifiersCompartment": {
 								"$ref": "AAAAAAGVqlSKiXluKWc="
 							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGVyZTgOPzyh+c=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 8078,
+							"top": 4674,
+							"width": 100,
+							"height": 25,
+							"text": "Text"
 						}
 					]
 				},

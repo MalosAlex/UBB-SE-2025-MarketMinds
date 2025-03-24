@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class BuyProductsRepository
+    public class BuyProductsRepository : ProductsRepository
     {
         private DataBaseConnection connection;
 
@@ -16,12 +16,12 @@ namespace DataAccessLayer.Repositories
             this.connection = connection;
         }
 
-        public override void SaveBuyProduct(BuyProduct product)
+        public void SaveBuyProduct(BuyProduct product)
         {
             throw new NotImplementedException();
         }
 
-        public override void DeleteBuyProduct(BuyProduct product)
+        public void DeleteBuyProduct(BuyProduct product)
         {
             string query = "DELETE FROM BuyProducts WHERE id = @Id";
 
