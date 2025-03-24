@@ -1,4 +1,4 @@
-﻿using DomainLayer.Domain;
+using DomainLayer.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class BuyProductsRepository
+    public class BorrowProductsRepository
     {
         private DataBaseConnection connection;
 
-        public BuyProductsRepository(DataBaseConnection connection)
+        public BorrowProductsRepository(DataBaseConnection connection)
         {
             this.connection = connection;
         }
 
-        public override void SaveBuyProduct(BuyProduct product)
+        public override void SaveBorrowProduct(BorrowProduct product)
         {
             throw new NotImplementedException();
         }
 
-        public override void DeleteBuyProduct(BuyProduct product)
+        public override void DeleteBorrowProduct(BorrowProduct product)
         {
-            string query = "DELETE FROM BuyProducts WHERE id = @Id";
+            string query = "DELETE FROM BorrowProducts WHERE id = @Id";
 
             connection.OpenConnection();
             using (SqlCommand cmd = new SqlCommand(query, connection.GetConnection()))
@@ -41,7 +41,7 @@ namespace DataAccessLayer.Repositories
             string query = @"
                         SELECT pt.id, pt.title
                         FROM ProductTags pt
-                        INNER JOIN BuyProductProductTags bpt ON pt.id = bpt.tag_id
+                        INNER JOIN BorrowProductProductTags bpt ON pt.id = bpt.tag_id
                         WHERE apt.product_id = @ProductId";
 
             connection.OpenConnection();
@@ -70,12 +70,12 @@ namespace DataAccessLayer.Repositories
             return null;
         }
 
-        public BorrowProduct GetBuyProductByID(int productId)
+        public BorrowProduct GetBorrowProductByID(int productId)
         {
             return null;
         }
 
-        public List<BorrowProduct> GetAllBuyProducts()
+        public List<BorrowProduct> GetAllBorrowProducts()
         {
             return null;
         }
