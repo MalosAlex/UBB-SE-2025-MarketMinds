@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch MarketMinds (ARM64)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-arm64",
+            "program": "${workspaceFolder}/MarketMinds/bin/Debug/net8.0-windows10.0.19041.0/win-arm64/MarketMinds.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/MarketMinds",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Launch Without Analysis (ARM64)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-without-analysis",
+            "program": "${workspaceFolder}/MarketMinds/bin/Debug/net8.0-windows10.0.19041.0/win-arm64/MarketMinds.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/MarketMinds",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Launch Clean Build (ARM64)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "clean-build",
+            "program": "${workspaceFolder}/MarketMinds/bin/Debug/net8.0-windows10.0.19041.0/win-arm64/MarketMinds.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/MarketMinds",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+} 
