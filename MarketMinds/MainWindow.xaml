@@ -1,0 +1,65 @@
+<Window x:Class="UiLayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:UiLayer"
+        Title="MarketMinds Marketplace">
+
+    <Grid>
+                
+        <!-- Welcome Header -->
+        <TextBlock Text="Welcome to MarketMinds Marketplace" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="20,20,0,0"/>
+
+        <!-- Admin Panel Button at Top-Right -->
+        <Button x:Name="AdminViewButton" Content="Admin Panel"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Width="200" Height="50" Margin="0,20,450,0"
+                Click="HandleAdminViewButton_Click"/>
+        
+        <!-- See reviews Button at Top-Right, it can be the same as Admin and appear depending on user type-->
+        <Button x:Name="ReviewViewButton" Content="See Reviews"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Width="150" Height="50" Margin="0,90,80,0"
+                Click="HandleSeeReviewViewButton_Click"/>
+
+        <!-- Create Listing Button at Top-Right -->
+        <Button x:Name="CreateListingButton" Content="Create Listing"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Width="200" Height="50" Margin="0,20,240,0"
+                Click="HandleCreateListingButton_Click"/>
+            
+        <Button x:Name="BasketButton"
+            HorizontalAlignment="Right" VerticalAlignment="Top"
+            Width="50" Height="50" Margin="0,20,20,0"
+            Click="HandleBasketViewButton_Click"
+            BorderThickness="0"
+            Background="Transparent">
+            <FontIcon Glyph="&#xE719;" FontSize="24"/>
+        </Button>
+
+        <Button x:Name="LeaveReviewViewButton" Content="Leave a Review"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="150" Height="50" Margin="0,20,80,0"
+            Click="HandleLeaveReviewButton_Click"/>
+        <!-- Temporary Create Review button, should be moved to seeOrders-->
+        
+        <!-- Product View Buttons Centered -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="AuctionProductListViewButton" Content="View Auction Products"
+                    Width="200" Height="50" Margin="10,10,10,10"
+                    Click="HandleAuctionProductListViewButton_Click"/>
+            <Button x:Name="BorrowProductListViewButton" Content="View Borrow Products"
+                    Width="200" Height="50" Margin="10,10,10,10"
+                    Click="HandleBorrowProductListViewButton_Click"/>
+            <Button x:Name="BuyProductListViewButton" Content="View Buy Products"
+                    Width="200" Height="50" Margin="10,10,10,10"
+                    Click="HandleBuyProductListViewButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
